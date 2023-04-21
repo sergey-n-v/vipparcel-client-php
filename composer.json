@@ -1,5 +1,5 @@
 {
-    "name": "asabix/vipparcel-client-php",
+    "name": "vipparcel/client",
     "description": "VIPparcel Client PHP",
     "require": {
         "php": "^8.1",
