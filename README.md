@@ -29,11 +29,11 @@ require 'vendor/autoload.php';
 ## Examples ##
 =======
 ```php
-$client = new VP_Client();
+$client = new \VipParcel\VP_Client();
 $client->auth_token('KEY');
 $client->is_test(TRUE); // production or test request (default: production)
         
-$request = new VP_Request_Account_Balance_History();
+$request = new \VipParcel\Request\Account\Balance\VP_Request_Account_Balance_History();
 $request->set_params(array('limit' => 10, 'orderBy' => array('created' => 'ASC')));
 
 $client->request($request); // set request object
@@ -46,9 +46,9 @@ print_r($result->as_array()); // result as array
 ```
 
 ```php
-$client = new VP_Client();
+$client = new \VipParcel\VP_Client();
 $client->auth_token('KEY');
-$client->request(new VP_Request_Shipping_Label_Info(144241)); // with item id
+$client->request(new \VipParcel\Request\Shipping\Label\VP_Request_Shipping_Label_Info(144241)); // with item id
 $result = $client->execute();
 ```
 
