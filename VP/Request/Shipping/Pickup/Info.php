@@ -1,4 +1,7 @@
 <?php
+namespace VipParcel\Request\Shipping\Pickup;
+
+use VipParcel\Abstract\VP_Abstract_Request;
 
 class VP_Request_Shipping_Pickup_Info extends VP_Abstract_Request
 {

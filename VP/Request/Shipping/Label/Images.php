@@ -1,4 +1,7 @@
 <?php
+namespace VipParcel\Request\Shipping\Label;
+
+use VipParcel\Abstract\VP_Abstract_Request;
 
 class VP_Request_Shipping_Label_Images extends VP_Abstract_Request
 {

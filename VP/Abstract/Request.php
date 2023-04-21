@@ -1,4 +1,5 @@
 <?php
+namespace VipParcel\Abstract;
 
 abstract class VP_Abstract_Request {
 

@@ -1,4 +1,7 @@
 <?php
+namespace VipParcel\Request\Shipping\Scan;
+
+use VipParcel\Abstract\VP_Abstract_Request;
 
 class VP_Request_Shipping_Scan_List extends VP_Abstract_Request
 {

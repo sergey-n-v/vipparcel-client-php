@@ -1,4 +1,7 @@
 <?php
+namespace VipParcel\Request\Location\State;
+
+use VipParcel\Abstract\VP_Abstract_Request;
 
 class VP_Request_Location_State_List extends VP_Abstract_Request
 {

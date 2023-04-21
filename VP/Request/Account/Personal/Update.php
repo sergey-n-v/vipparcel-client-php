@@ -1,4 +1,7 @@
 <?php
+namespace VipParcel\Request\Account\Personal;
+
+use VipParcel\Abstract\VP_Abstract_Request;
 
 class VP_Request_Account_Personal_Update extends VP_Abstract_Request
 {

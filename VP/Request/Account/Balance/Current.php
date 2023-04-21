@@ -1,4 +1,7 @@
 <?php
+namespace VipParcel\Request\Account\Balance;
+
+use VipParcel\Abstract\VP_Abstract_Request;
 
 class VP_Request_Account_Balance_Current extends VP_Abstract_Request
 {

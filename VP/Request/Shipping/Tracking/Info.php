@@ -1,4 +1,7 @@
 <?php
+namespace VipParcel\Request\Shipping\Tracking;
+
+use VipParcel\Abstract\VP_Abstract_Request;
 
 class VP_Request_Shipping_Tracking_Info extends VP_Abstract_Request
 {

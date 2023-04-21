@@ -1,4 +1,7 @@
 <?php
+namespace VipParcel\Request\Account\Address;
+
+use VipParcel\Abstract\VP_Abstract_Request;
 
 class VP_Request_Account_Address_List extends VP_Abstract_Request
 {

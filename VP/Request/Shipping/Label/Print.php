@@ -1,4 +1,9 @@
 <?php
+namespace VipParcel\Request\Shipping\Label;
+
+use VipParcel\Abstract\VP_Abstract_Request;
+use VipParcel\VP_Exception;
+
 
 class VP_Request_Shipping_Label_Print extends VP_Abstract_Request
 {

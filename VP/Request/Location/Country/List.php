@@ -1,4 +1,7 @@
 <?php
+namespace VipParcel\Request\Location\Country;
+
+use VipParcel\Abstract\VP_Abstract_Request;
 
 class VP_Request_Location_Country_List extends VP_Abstract_Request
 {

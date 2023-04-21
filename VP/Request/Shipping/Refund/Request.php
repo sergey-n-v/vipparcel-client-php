@@ -1,4 +1,7 @@
 <?php
+namespace VipParcel\Request\Shipping\Refund;
+
+use VipParcel\Abstract\VP_Abstract_Request;
 
 class VP_Request_Shipping_Refund_Request extends VP_Abstract_Request
 {

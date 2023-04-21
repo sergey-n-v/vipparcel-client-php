@@ -1,4 +1,5 @@
 <?php
+namespace VipParcel;
 
 use GuzzleHttp\Client;
 
