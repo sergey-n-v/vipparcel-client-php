@@ -2,7 +2,7 @@ VIPparcel APIs Client Library for PHP
 ====================
 
 ## Requirements ##
-* [PHP 5.3.3 or higher](http://www.php.net/)
+* [PHP 7.2 or higher](http://www.php.net/)
 * [PHP cURL extension] (http://php.net/manual/en/book.curl.php)
 * [PHP JSON extension](http://php.net/manual/en/book.json.php)
 * [Composer] (https://github.com/composer/composer)
@@ -11,7 +11,7 @@ VIPparcel APIs Client Library for PHP
 https://vipparcel.com/docs/api/
 
 ## Dependence ##
-* [Guzzle HTTP client] (https://github.com/guzzle/guzzle)
+* [Guzzle HTTP client] (https://github.com/guzzle/guzzle )
 
 ## Installation ##
 Run the Composer command
@@ -50,7 +50,6 @@ $client = new VP_Client();
 $client->auth_token('KEY');
 $client->request(new VP_Request_Shipping_Label_Info(144241)); // with item id
 $result = $client->execute();
-...
 ```
 
 ## Request Objects ##
