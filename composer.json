@@ -1,12 +1,14 @@
 {
     "name": "vipparcel/client",
-    "description": "VIPparcel Client PHP",
+    "description": "VIPParcel Client PHP",
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2"
     },
     "autoload": {
-        "classmap": ["VP"]
+        "psr-4": {
+            "VipParcel\\": "VP/"
+        }
     },
     "license": "GNU GENERAL PUBLIC LICENSE",
     "authors": [
