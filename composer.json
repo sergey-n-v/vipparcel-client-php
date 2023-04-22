@@ -8,7 +8,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VipParcel\\": "VP/"
+            "VipParcel\\": "VP"
         }
     },
     "license": "GNU GENERAL PUBLIC LICENSE",
