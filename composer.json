@@ -1,5 +1,6 @@
 {
     "name": "vipparcel/client",
+    "type": "library",
     "description": "VIPParcel Client PHP",
     "version": "1.0.2",
     "require": {
