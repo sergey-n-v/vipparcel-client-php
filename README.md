@@ -29,11 +29,14 @@ require 'vendor/autoload.php';
 ## Examples ##
 =======
 ```php
-$client = new \VipParcel\VP_Client();
+use VipParcel\VPClient;
+use VipParcel\Request\Account\Balance\VPRequestAccountBalanceHistory;
+
+$client = new VPClient();
 $client->auth_token('KEY');
 $client->is_test(TRUE); // production or test request (default: production)
         
-$request = new \VipParcel\Request\Account\Balance\VP_Request_Account_Balance_History();
+$request = new VPRequestAccountBalanceHistory();
 $request->set_params(array('limit' => 10, 'orderBy' => array('created' => 'ASC')));
 
 $client->request($request); // set request object
@@ -46,58 +49,61 @@ print_r($result->as_array()); // result as array
 ```
 
 ```php
-$client = new \VipParcel\VP_Client();
+use VipParcel\VPClient;
+use VipParcel\Request\Shipping\Label\VPRequestShippingLabelInfo;
+
+$client = new VPClient();
 $client->auth_token('KEY');
-$client->request(new \VipParcel\Request\Shipping\Label\VP_Request_Shipping_Label_Info(144241)); // with item id
+$client->request(new VPRequestShippingLabelInfo(144241)); // with item id
 $result = $client->execute();
 ```
 
 ## Request Objects ##
 
 Account > Address
-* [POST] VP_Request_Account_Address_Create
-* [GET] VP_Request_Account_Address_List
-* [GET] VP_Request_Account_Address_Info
-* [PUT] VP_Request_Account_Address_Update
-* [DELETE] VP_Request_Account_Address_Delete
+* [POST] VPRequestAccountAddressCreate
+* [GET] VPRequestAccountAddressList
+* [GET] VPRequestAccountAddressInfo
+* [PUT] VPRequestAccountAddressUpdate
+* [DELETE] VPRequestAccountAddressDelete
 
 Account > Balance
-* [GET] VP_Request_Account_Balance_Current
-* [GET] VP_Request_Account_Balance_History
+* [GET] VPRequestAccountBalanceCurrent
+* [GET] VPRequestAccountBalanceHistory
 
 Account > Personal Info
-* [GET] VP_Request_Account_Personal_Details
-* [PUT] VP_Request_Account_Personal_Update
+* [GET] VPRequestAccountPersonalDetails
+* [PUT] VPRequestAccountPersonalUpdate
 
 Shipping > Label
-* [GET] VP_Request_Shipping_Label_Info
-* [GET] VP_Request_Shipping_Label_List
-* [GET] VP_Request_Shipping_Label_Images
-* [POST] VP_Request_Shipping_Label_Calculate
-* [POST] VP_Request_Shipping_Label_Print
+* [GET] VPRequestShippingLabelInfo
+* [GET] VPRequestShippingLabelList
+* [GET] VPRequestShippingLabelImages
+* [POST] VPRequestShippingLabelCalculate
+* [POST] VPRequestShippingLabelPrint
 
 Shipping > Pickup
-* [GET] VP_Request_Shipping_Pickup_List
-* [GET] VP_Request_Shipping_Pickup_Info
-* [POST] VP_Request_Shipping_Pickup_Request
+* [GET] VPRequestShippingPickupList
+* [GET] VPRequestShippingPickupInfo
+* [POST] VPRequestShippingPickupRequest
 
 Shipping > Refund
-* [GET] VP_Request_Shipping_Refund_Info
-* [GET] VP_Request_Shipping_Refund_List
-* [GET] VP_Request_Shipping_Refund_Labels
-* [POST] VP_Request_Shipping_Refund_Request
+* [GET] VPRequestShippingRefundInfo
+* [GET] VPRequestShippingRefundList
+* [GET] VPRequestShippingRefundLabels
+* [POST] VPRequestShippingRefundRequest
 
 Shipping > Scan Form
-* [GET] VP_Request_Shipping_Scan_Info
-* [GET] VP_Request_Shipping_Scan_List
-* [GET] VP_Request_Shipping_Scan_Labels
-* [POST] VP_Request_Shipping_Scan_Create
+* [GET] VPRequestShippingScanInfo
+* [GET] VPRequestShippingScanList
+* [GET] VPRequestShippingScanLabels
+* [POST] VPRequestShippingScanCreate
 
 Shipping > Tracking
-* [GET] VP_Request_Shipping_Tracking_Info
+* [GET] VPRequestShippingTrackingInfo
 
 Location > Country
-* [GET] VP_Request_Location_Country_List
+* [GET] VPRequestLocationCountryList
 
 Location > State
-* [GET] VP_Request_Location_State_List
+* [GET] VPRequestLocationStateList
