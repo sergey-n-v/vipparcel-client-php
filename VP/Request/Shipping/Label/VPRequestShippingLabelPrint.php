@@ -36,32 +36,35 @@ class VPRequestShippingLabelPrint extends VPAbstractRequest
 
     public function info_params()
     {
-        $international = array(
+        $baseField = [
             'authToken',
             'mailClass',
             'weightOz',
             'sender', // @TODO array
             'recipient', // @TODO array
-            'insuredValue',
-            'customsInfo',
-            'customsItem',
-            'labelType',
-        );
-
-        $domestic = array(
-            'authToken',
-            'mailClass',
-            'weightOz',
             'description',
-            'service',
-            'sender',
-            'recipient',
             'insuredValue',
-            'dimensionalWeight',
             'labelType',
-        );
+            'shipDate',
+            'rubberStamp1',
+            'rubberStamp2',
+            'rubberStamp3',
+            'imageFormat',
+            'imageResolution',
+            'validationAddress',
+            'reference'
+        ];
+        $international = [
+            'customsInfo',
+            'customsItem'
+        ];
 
-        return ($this->is_international() ? $international : $domestic);
+        $domestic = [
+            'deliveryConfirmation',
+            'dimensionalWeight']
+        ;
+
+        return array_merge($baseField,($this->is_international() ? $international : $domestic));
 
     }
 

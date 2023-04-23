@@ -3,6 +3,10 @@ namespace VipParcel\Abstract;
 
 use VipParcel\VPException;
 
+/**
+ * Class VPAbstractRequest
+ * @package VipParcel\Abstract
+ */
 abstract class VPAbstractRequest {
 
     const METHOD_POST = 'post';
