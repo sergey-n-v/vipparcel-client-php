@@ -43,6 +43,8 @@ class VPRequestShippingLabelCalculate extends VPAbstractRequest
             'senderPostalCode',
             'countryId',
             'labelType',
+            'deliveryConfirmation',
+            'insuredValue'
         );
 
         $domestic = array(
@@ -55,6 +57,8 @@ class VPRequestShippingLabelCalculate extends VPAbstractRequest
             'recipientPostalCode',
             'dimensionalWeight', // @TODO array
             'labelType',
+            'deliveryConfirmation',
+            'insuredValue'
         );
 
         return ($this->is_international() ? $international : $domestic);
