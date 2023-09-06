@@ -2,7 +2,7 @@
     "name": "vipparcel/client",
     "type": "library",
     "description": "VIPParcel Client PHP",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2"
