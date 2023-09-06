@@ -53,10 +53,11 @@ class VPRequestShippingLabelPrint extends VPAbstractRequest
             'imageResolution',
             'validationAddress',
             'reference',
-            'customsItem'
+            'customsItem',
+            'customsInfo',
         ];
         $international = [
-            'customsInfo',
+//            'customsInfo',
 //            'customsItem'
         ];
 
