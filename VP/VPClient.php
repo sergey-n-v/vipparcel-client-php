@@ -73,7 +73,8 @@ class VPClient {
         }
         $response = $http_client->$request_method($full_url, [
             $params_key => $send_params,
-            'http_errors' => false
+            'http_errors' => false,
+            'read_timeout' => 10,
         ]);
         return new VPResponse($response);
     }
