@@ -56,6 +56,8 @@ class VPRequestShippingLabelCalculateAll extends VPAbstractRequest
             'insuredValue',
             'senderPostalCode',
             'deliveryConfirmation',
+            'recipientPostalCode',
+            'dimensionalWeight', // @TODO array
             'countryId',
             'labelType',
             'length',
