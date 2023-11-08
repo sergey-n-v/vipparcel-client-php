@@ -20,6 +20,9 @@ class VPRequestShippingLabelCalculateAll extends VPAbstractRequest
 //        if (!$mailClass) {
 //            throw new VPException('Required parameter not passed: mailClass');
 //        }
+        $labelType =$this->_params['labelType']??null;
+        if ($labelType) return  $labelType == self::LABEL_TYPE_INTERNATIONAL;
+
         return (str_contains($mailClass, 'International'));
     }
 

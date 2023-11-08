@@ -14,6 +14,9 @@ abstract class VPAbstractRequest {
     const METHOD_PUT = 'put';
     const METHOD_DELETE = 'delete';
 
+    const LABEL_TYPE_DOMESTIC = "domestic";
+    const LABEL_TYPE_INTERNATIONAL = "international";
+
     protected $_item_id;
     protected $_params = array();
 

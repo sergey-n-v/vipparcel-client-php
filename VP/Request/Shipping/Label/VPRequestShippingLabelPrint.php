@@ -13,6 +13,10 @@ class VPRequestShippingLabelPrint extends VPAbstractRequest
         if (empty($this->_params['mailClass'])) {
             throw new VPException('Required parameter not passed: mailClass');
         }
+
+        $labelType =$this->_params['labelType']??null;
+        if ($labelType) return  $labelType == self::LABEL_TYPE_INTERNATIONAL;
+
         return (strpos($this->_params['mailClass'], 'International') !== FALSE);
     }
 
@@ -55,15 +59,19 @@ class VPRequestShippingLabelPrint extends VPAbstractRequest
             'reference',
             'customsItem',
             'customsInfo',
+            'dimensionalWeight',
+            'deliveryConfirmation'
         ];
         $international = [
 //            'customsInfo',
-//            'customsItem'
+//            'customsItem',
+//            'dimensionalWeight'
         ];
 
         $domestic = [
-            'deliveryConfirmation',
-            'dimensionalWeight']
+//            'deliveryConfirmation',
+//            'dimensionalWeight'
+        ]
         ;
 
         return array_merge($baseField,($this->is_international() ? $international : $domestic));
